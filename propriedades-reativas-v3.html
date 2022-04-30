@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+  <div id="app">
+    <p>{{titulo}}</p>
+    <button @click="somar">Somar 1</button>
+    <hr>
+    <input type="text" :value=""contador>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script> new Vue({
+      el: '#app',
+      data: {
+        titulo: 'Usando o VueJS 2!'
+      },
+      methods: {
+        somar(event) {
+          this.contador++
+        }
+      } // metodos que acontecem em eventos no html
+    })</script>
+</body>
+
+</html>
