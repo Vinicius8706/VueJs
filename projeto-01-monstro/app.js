@@ -12,6 +12,9 @@ running:false
 
   },
    watch: {
+     hasResult(value) {
+       if(value) this.running =false
+     }
 
   }, methods: {
     startGame(){
@@ -20,12 +23,13 @@ running:false
       this.playerLife = 100
     },
     attack(especial){
-      this.hurt(7,12,false)
+      this.hurt('monsterLife',5,10,false)
+      this.hurt('playerLife',7,12,false)
     },
-    hurt(min,max,especial){
+    hurt(prop,min,max,especial){
       const plus = especial ? 5 : 0
       const hurt = this.getRandom(min + plus, max+plus)
-      this.playeLife=Math.max(this.playeLife - hurt,0) // evitar que o dano fim do usuario seja negativo
+      this[prop]=Math.max(this[prop] - hurt,0) // evitar que o dano fim do usuario seja negativo
       // somar o valor minimo e maximo para ter um regime entre os valores maiores
     },
     getRandom(min,max){
