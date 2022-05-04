@@ -18,7 +18,7 @@
   <ul v-for="(array,indice) in array">
     <li>{{array}} ({{indice}})</li>
   </ul>
-  
+
   <!-- 3) Imprimir todos os pares de valor-chave do objeto a seguir:
     {
 			titulo: 'O Senhor dos Anéis',
@@ -27,10 +27,10 @@
 		}
     Imprima também o índice de cada item. -->
   <h2>#03</h2>
-  <ul v-for="(indice,livros) in livro">
-    <li v-for="(autor,volume,titulo) in livro">{{livros}} {{volume}} {{titulo}} - ({{indice}})</li>
+  <ul>
+    <li v-for="(valor,cgave,indice) in livro">{{valor}} - {{valor}} - ({{indice}})</li>
   </ul>
-  
+
   <!-- 4) Imprima o seguinte objeto (somente os valores) e
     também crie um loop aninhado para o array:
     {
@@ -41,9 +41,15 @@
     (dica: use v-for e v-if na resolução) -->
   <h2>#04</h2>
   <ul>
-    <li>
-    
+    <li v-for="valor in aluno">
+      <template v-if="!Array.isArray(valor)">{{valor }}</template>
     </li>
+    <template v-else>
+      Notas:
+      <ul>
+        <li v-for="nota in valor">{{notas}}</li>
+      </ul>
+    </template>
   </ul>
 </div>
 <script src="app.js"></script>
