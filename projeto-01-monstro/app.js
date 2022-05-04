@@ -1,8 +1,8 @@
 new Vue({
   el: '#app',
   data: {
-playerLife:10,
-monsterLife:0,
+playerLife:100,
+monsterLife:100,
 running:true
   },
    computed: {
@@ -14,6 +14,18 @@ running:true
    watch: {
 
   }, methods: {
+    startGame(){
+      this.running = true
+      this.monsterLife = 100
+      this.playerLife = 100
+    },
+    attack(especial){
+
+    },
+    getRandom(min,max){
+      const value = Math.random() *(max - min) + min
+      return Math.rount(value)
+    }
 
   }
 })
