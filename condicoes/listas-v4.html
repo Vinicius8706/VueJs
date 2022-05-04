@@ -11,7 +11,7 @@
   <template v-for="(cor,i) in cores">
     <h1>{{cor}}</h1>
     <p>{{i}}</p>
-
+    <button @click="cores.push('branca')">Adicionar</button>
   </template>
   <hr>
   <ul>
@@ -21,6 +21,9 @@
       </span>
     </li>
   </ul>
+  <hr>
+  <span v-for="n in 10">{{n}}</span>
+  <!-- renderiza 10 numeros -->
 </div>
 <script>new Vue({
     el: "#app",
