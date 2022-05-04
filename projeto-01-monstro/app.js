@@ -3,7 +3,7 @@ new Vue({
   data: {
 playerLife:10,
 monsterLife:0,
-running:false
+running:true
   },
    computed: {
      hasResult(){
