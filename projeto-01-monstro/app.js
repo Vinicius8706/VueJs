@@ -3,7 +3,7 @@ new Vue({
   data: {
 playerLife:100,
 monsterLife:100,
-running:true
+running:false
   },
    computed: {
      hasResult(){
@@ -20,7 +20,7 @@ running:true
       this.playerLife = 100
     },
     attack(especial){
-console.log(especial,this.getRandom(5,10));
+      this.hurt(7,12,false)
     },
     hurt(min,max,especial){
       const plus = especial ? 5 : 0
