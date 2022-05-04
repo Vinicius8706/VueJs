@@ -34,8 +34,21 @@
       </div>
     </div>
 
-    <div class="panel result"></div>
-    <div class="panel button"></div>
+    <div v-if="hasResult" class="panel result">
+      <div v-if="monsterLife == 0" class="win">
+        Você ganhou!! :)
+      </div>
+      <div v-else class="lose">
+        Você perdeu!! :(
+      </div>
+    </div>
+    <div class="panel buttons">
+      <div class="btn attack">Ataque</div>
+      <div class="btn especial-attack">Ataque Especial</div>
+      <div class="btn heal">Curar</div>
+      <div class="btn give-up">Desistir</div>
+      <div class="btn new-game">Iniciar Jogo</div>
+    </div>
     <div class="panel logs"></div>
   </div>
 </body>
