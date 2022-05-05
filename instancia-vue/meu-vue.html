@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+
+<div id="app">
+{{nome}} {{ sobrenome}} {[ 1 + 1]}
+</div>
+
+<script>
+  function meuVue(params) {
+    this.$et = document.querySelector(params.el)
+    this.$data = params.data
+
+    for (let atr in this.$data) {
+        Object.defineProperty(this,atr,{get:()=>
+          {
+            get:()=>{
+
+              return this.$data[atr]
+            }
+          },
+        set: value=>{
+          this.$data[atr] = value
+        }}) //server como proxy altera o atributo com o valor que sera passado
+        //funcoes get e set serao chamadas para alterar o valor e ler
+    }
+    const regex = /\{\{([\s\w+]*)\}\}/g
+    this.$el.innerHTML = this.$el.innerHTML.replace(regex,(match,$1)=>{
+      const value = this[$1.trim()]
+      return value ? value  : eval($1)
+    })
+  }
+
+  const vm = new MeuVue({
+    el: "#app",data: {
+      nome: 'Maria',sobrenome:'Silva'
+    }
+  })
+</script>
