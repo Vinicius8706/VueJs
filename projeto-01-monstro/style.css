@@ -108,3 +108,32 @@ html {
   background-color: #BBB;
   color: black;
 }
+
+.logs ul{
+  display:flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logs ul li{
+  display:flex;
+  margin: 4px 0px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 3px 0px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  justify-content: center;
+}
+
+.player{
+  background-color: #4253afaa;
+  color: #fff;
+}
+
+.monster{
+  background-color: #e51c24aa;
+  color: #fff;
+}
