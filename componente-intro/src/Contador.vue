@@ -1,3 +1,4 @@
+
 <template>
 <div class="container">
 <span>{{contador}}</span>
@@ -8,7 +9,7 @@
 </template>
 
 <script>
-export default{
+export default {
   data() {
     return {
       contador: 0
