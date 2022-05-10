@@ -1,14 +1,16 @@
 <template> 
-<h1 id="app">
-Contador: {{contador}}
-</h1>
+  <div id="app">
+  <h1>
+    Contadores
+  </h1>
+ <app-contador/>
+  </div>
 </template>
+
 <script>
 export default {
-    data(){
-    return{
-      contador: 0
-    }
-  }
+   
 }
+//  eslint-disable 
 </script>
+
