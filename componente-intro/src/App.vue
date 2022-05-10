@@ -1,16 +1,21 @@
+
 <template> 
-  <div id="app">
-  <h1>
-    Contadores
-  </h1>
- <app-contador/>
+  <div>
+    <p>AAAA</p>
   </div>
 </template>
-
 <script>
-export default {
-   
-}
-//  eslint-disable 
-</script>
+import Contador from './Contador.vue';
 
+export default {
+  
+  components:{
+   Contador
+  },
+    data(){
+    return{
+      count: 0
+    }
+  }
+}
+</script>
