@@ -1,21 +1,30 @@
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from '@/components/HelloWorld.vue'
+import Count from '@/components/Count.vue';
 
-<template> 
-  <div>
-    <p>AAAA</p>
+</script>
+
+<template>
+  <div id="app">
+    <h1>Contadores</h1>
+    <Count></Count>
   </div>
 </template>
 <script>
-import Contador from './Contador.vue';
 
 export default {
-  
-  components:{
-   Contador
-  },
-    data(){
-    return{
-      count: 0
+  name: 'Count',
+  data() {
+    return {
+
     }
+  },
+  components: {
+    Count
   }
 }
 </script>
+<style>
+
+</style>
